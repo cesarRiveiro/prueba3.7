@@ -1,0 +1,112 @@
+body {
+    background: white;
+}
+
+.contenedor {
+    width: 500px;
+    height: 300px;
+    background: gray;
+    margin: 20px;
+    border: 10px solid black;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    contenedor padre:
+    display flex
+    inline-flex
+
+
+    los hijos son los elementos flex, solo son elementos flex los hijos directos***
+
+
+    el eje principial trabaja con la propiedad flex-direction "eje horizontal"
+    el eje secundario es el que trabaja en vertical
+
+    Flex direction nos permite elegir la dirección en la que se van posicionar nuestras cajas
+    row -> filas
+    row/column-reverse filas empezando por la derecha
+    column las pone en columna
+    
+    flex-direction: row;
+    
+    flex-wrap para posicionar elementos y ajustarlos al espacio que tenga en pantalla
+    wrap ajusta al tamaño moviendolos si es necesario
+    no-wrap ajusta las cajas al tamaño del contenedor para que queden en la línea marcada
+    wrap-reverse cambia el orden de las cajas
+    
+    flex-wrap: wrap;
+
+    justify-content:;
+    center -> te centra el contenido
+    space-around distribuye los elementos por el contenedor y deja un espacio proporcional entre las cajas
+    space-betewwn igual que el anterior pero sin margenes al principio y al final
+    para ubicar las cajas en el contenedor
+    
+    justify-content: center;
+    
+    Para alinear las cajas arriba, abajo, al centro
+    center en el centro
+    flex-end abajo
+    flex-start arriba
+    stretch tienes que tener un heithg automatico- les hace abarcar el 100% del contenedor
+    baseline si tiene una fuente diferente los alinea -- jilipolleces
+    
+    align-items: center;
+
+    
+    para alinear grupos de cajas si las cajas estar repartidas en filas
+    se usa cuando no se puede utilizar align-items: ;
+    si hai varias filas, ojo
+     align-content: ; Esta propiedad solo funciona para varias lineas, cuanto tenemos con wrap
+    */
+
+
+/*
+    flex-basis es como whidth es dinamico.
+    flex-grow lo que hace es que todos los elementos toman el tamaño necesario para cubrir el contenedor
+    dependiendo del valor crece mas o menos
+    flex-shrink para disminuir su tamaño
+    */
+
+.elem {
+    flex-grow: 1;
+    color: blue;
+    margin: 5px;
+    background: yellow;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.elemento1 {
+    width: 90%;
+    margin: 10px;
+}
+
+.elemento2,
+.elemento3 {
+    width: 100px;
+    height: 100px;
+    margin-left: 25px;
+    align-self: flex-start;
+}
+
+.elemento4 {
+    width: 90%;
+    align-self: stretch;
+    width: auto;
+    align-items: flex-start;
+    flex-wrap: wrap ;
+}
+
+.elemento5 {
+    width: 90%;
+    margin: 10px;
+}
